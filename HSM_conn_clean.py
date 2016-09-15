@@ -19,23 +19,15 @@ def tcp_conn():
 
     PORT = 1500
 
-    #MAC
-    #message = ""
-
-
-    #MAC
-    #message = ""
-
-    #Pin verification
+  
     message = ""
 
 
-"""
     binary = b""
 
-    message = "" + "" + "" + "" + ""
+  
 
-    #message = ""
+    
 
     size = len(message) + len(binary)
 
@@ -46,8 +38,6 @@ def tcp_conn():
     #command = struct.pack("!h", size) +  message.encode()
 
     command = struct.pack("!h", size) + message.encode() + binary
-
-    #whole_command = command + binary
 
     print (command)
 
@@ -63,21 +53,6 @@ def tcp_conn():
 
     sock.close()
     print(str(data))
-
-def toHex(s):
-    lst = []
-    for ch in s:
-        hv = hex(ord(ch)).replace('0x', '')
-        if len(hv) == 1:
-            hv = '0'+hv
-        lst.append(hv)
-
-    return reduce(lambda x,y:x+y, lst)
-
-#convert hex repr to string
-def toStr(s):
-    return s and chr(atoi(s[:2], base=16)) + toStr(s[2:]) or ''
-
 
 
 if __name__ == "__main__":
