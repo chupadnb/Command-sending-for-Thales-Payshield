@@ -9,25 +9,14 @@ __author__ = 'jcakmak'
 import socket
 import sys
 
-
 def tcp_conn():
 
-   
-
     HOST = ''
-
-
     PORT = 1500
 
-  
     message = ""
 
-
     binary = b""
-
-  
-
-    
 
     size = len(message) + len(binary)
 
@@ -53,7 +42,6 @@ def tcp_conn():
 
     sock.close()
     print(str(data))
-
 
 if __name__ == "__main__":
     tcp_conn()
