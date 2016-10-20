@@ -20,11 +20,7 @@ def tcp_conn():
 
     size = len(message) + len(binary)
 
-    #size = len(message)
-
     print (size)
-
-    #command = struct.pack("!h", size) +  message.encode()
 
     command = struct.pack("!h", size) + message.encode() + binary
 
